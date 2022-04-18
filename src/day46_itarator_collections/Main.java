@@ -1,30 +1,42 @@
 package day46_itarator_collections;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static String SearchingChallenge(String str) {
         // code goes here
-        String str1="";
+        String [] arr=str.split(" ");
+        System.out.println(Arrays.toString(arr));
+        String str1="z";
         int count=0;
-        for(int i=0 ; i<str.length() ; i++){
-            for(int j=i+1 ; j<str.length(); j++){
-                if(str.charAt(i)==str.charAt(j)) {
-                    count++;
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j <arr[i].length() ; j++) {
+                for (int k = 0; k <arr[i].length(); k++) {
+                    if (arr[i].charAt(j)==arr[i].charAt(k)) {
+                        count++;
+
+
+                    }
+
                 }
-            }
-            if(count>=2){
+                if (count ==2){
+                   if (str1.charAt(0)>arr[i].charAt(j)){
+                       str1= arr[i].substring(j,j+1);
+                        str=arr[i];
+                   }
 
-                str1+=str.substring(i,i+1);
-            }
+                }
 
+                count=0;
+            }
 
         }
 
 
 
 
-        return str1;
+        return str;
     }
 
 
