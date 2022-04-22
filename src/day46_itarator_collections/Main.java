@@ -12,7 +12,7 @@ public class Main {
         int count=0;
         for (int i = 0; i <arr.length ; i++) {
             for (int j = 0; j <arr[i].length() ; j++) {
-                for (int k = 0; k <arr[i].length(); k++) {
+                for (int k = j+1; k <arr[i].length(); k++) {
                     if (arr[i].charAt(j)==arr[i].charAt(k)) {
                         count++;
 
