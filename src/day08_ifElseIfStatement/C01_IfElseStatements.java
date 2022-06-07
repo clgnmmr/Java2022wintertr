@@ -21,10 +21,6 @@ public class C01_IfElseStatements {
         }else {
             System.out.println("girdiğiniz karekter bir harf değil");
         }
-
-
-
-
     }
 
 
